@@ -18,6 +18,15 @@ class UniformPieceGroupsController < ApplicationController
     @uniform_piece_group = UniformPieceGroup.new
   end
 
+  # Modal
+  def new_group_modal
+    @uniform_piece_group = UniformPieceGroup.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
+  end
+
   # GET /uniform_piece_groups/1/edit
   def edit
   end

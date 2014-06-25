@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
   get "uniform_piece_types/new_type_modal" => 'uniform_piece_types#new_type_modal', :as => :new_type_modal
+  get "uniform_piece_groups/new_group_modal" => 'uniform_piece_groups#new_group_modal', :as => :new_group_modal
 
   resources :branch_contacts
 

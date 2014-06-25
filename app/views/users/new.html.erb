@@ -3,9 +3,15 @@
     <%= render "admin/menu" %>
   </div>
   <div class="col-md-10 column">
-    <%= link_to 'Voltar', users_path, class: "btn btn-primary" %>
-    <hr>
-    <h2>Editando usuário</h2>
-      <%= render "form" %>
+    <div class="col-sm-12">
+      <%= link_to 'Voltar', users_path, class: "btn btn-primary" %>
+      <hr>
+      <h2>Editando usuário</h2>
+    </div>
+    <div class="col-sm-12">
+      <div class="col-sm-5">
+        <%= render "form" %>
+      </div>
+    </div>
   </div>
 </div>
