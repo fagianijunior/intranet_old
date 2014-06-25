@@ -1,0 +1,26 @@
+<%= simple_form_for(@uniform, html: { class: "form-horizontal" }, defaults: { input_html: { class: "form-control" } }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="col-sm-12">
+    <div class="col-sm-5">
+      <div class="form-inputs">
+        <%= f.association :uniform_piece_type, label_method: :piece_type, prompt: "Tipo", label: false %>
+        <!--%= link_to '+Novo tipo', new_type_modal_path, { :remote => true, 'data-toggle' => "modal", 'data-target' => '#modal-window', 'data-update-target' => 'uniform_piece_type' } %-->
+        <%= link_to '+Novo tipo', new_uniform_piece_type_path, { :remote => true, 'data-toggle' => "modal", 'data-target' => '#modal-window', 'data-update-target' => 'uniform_piece_type' } %>
+        <%= f.association :uniform_piece_group, label_method: :group %>
+        <%= f.input :entry, label: "Data de entrada", start_year: Date.today.year-5, end_year: Date.today.year+10, order: [ :day, :month, :year ], prompt: ["Dia", "Mês", "Ano"], input_html: { class: "datepicker" } %>
+        <%= f.input :expiration, label: "Data para troca", start_year: Date.today.year, end_year: Date.today.year+20, order: [ :day, :month, :year ], prompt: ["Dia", "Mês", "Ano"], input_html: { class: "datepicker" } %>
+
+        <!--%= f.association :user %-->
+      </div>
+      <div class="form-actions">
+        <hr>
+        <%= f.button :submit %>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>

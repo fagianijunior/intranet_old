@@ -1,0 +1,34 @@
+
+<h1>Listing uniforms</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Uniform piece type</th>
+      <th>Uniform piece group</th>
+      <th>Entry</th>
+      <th>Expiration</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uniforms.each do |uniform| %>
+      <tr>
+        <td><%= uniform.uniform_piece_type.piece_type %></td>
+        <td><%= uniform.uniform_piece_group.group %></td>
+        <td><%= uniform.entry %></td>
+        <td><%= uniform.expiration %></td>
+        <td><%= uniform.user unless uniform.user.nil? %></td>
+        <td><%= link_to 'Show', uniform %></td>
+        <td><%= link_to 'Edit', edit_uniform_path(uniform) %></td>
+        <td><%= link_to 'Destroy', uniform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Uniform', new_uniform_path %>

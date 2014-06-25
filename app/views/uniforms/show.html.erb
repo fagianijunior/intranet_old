@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uniform piece type:</strong>
+  <%= @uniform.uniform_piece_type %>
+</p>
+
+<p>
+  <strong>Uniform piece group:</strong>
+  <%= @uniform.uniform_piece_group %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @uniform.entry %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @uniform.expiration %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @uniform.user %>
+</p>
+
+<%= link_to 'Edit', edit_uniform_path(@uniform) %> |
+<%= link_to 'Back', uniforms_path %>
