@@ -27,15 +27,15 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :large do
-    process :resize_to_fill => [400, 518]
+    process :resize_to_fill => [350, 350]
   end
 
   version :medium do
-    process :resize_to_fill => [200, 318]
+    process :resize_to_fill => [150, 150]
   end
 
   version :small do
-    process :resize_to_fill => [25,25]
+    process :resize_to_fill => [20,20]
   end
 
   def cache_dir

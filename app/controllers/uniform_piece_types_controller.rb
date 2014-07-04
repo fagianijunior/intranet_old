@@ -18,15 +18,6 @@ class UniformPieceTypesController < ApplicationController
     @uniform_piece_type = UniformPieceType.new
   end
 
-  # Modal
-  def new_type_modal
-    @uniform_piece_type = UniformPieceType.new
-    respond_to do |format|
-      format.html { render :new }
-      format.js
-    end
-  end
-
   # GET /uniform_piece_types/1/edit
   def edit
   end
@@ -38,13 +29,12 @@ class UniformPieceTypesController < ApplicationController
 
     respond_to do |format|
       if @uniform_piece_type.save
-        format.html { redirect_to @uniform_piece_type, notice: 'Uniform piece type was successfully created.' }
+        #format.html { redirect_to @uniform_piece_type, notice: 'Uniform piece type was successfully created.' }
+        format.html { redirect_to new_uniform_path }
         format.json { render :show, status: :created, location: @uniform_piece_type }
-   #     format.js   { render :show, status: :created, location: @uniform }
       else
         format.html { render :new }
         format.json { render json: @uniform_piece_type.errors, status: :unprocessable_entity }
-    #    format.js   { render json: @uniform_piece_type.errors, status: :unprocessable_entity }
       end
     end
   end

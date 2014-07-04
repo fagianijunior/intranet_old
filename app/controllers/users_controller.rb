@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @uniforms_free = Uniform.where( :user => nil )
+
   end
 
   # GET /users/new

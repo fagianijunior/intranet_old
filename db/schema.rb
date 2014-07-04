@@ -69,10 +69,12 @@ ActiveRecord::Schema.define(version: 20140620211655) do
 
   create_table "uniform_piece_groups", force: true do |t|
     t.string   "group"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "uniform_piece_groups", ["group"], name: "index_uniform_piece_groups_on_group", using: :btree
 
   create_table "uniform_piece_types", force: true do |t|
     t.string   "piece_type"
@@ -80,6 +82,8 @@ ActiveRecord::Schema.define(version: 20140620211655) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "uniform_piece_types", ["piece_type"], name: "index_uniform_piece_types_on_piece_type", using: :btree
 
   create_table "uniforms", force: true do |t|
     t.integer  "uniform_piece_type_id"

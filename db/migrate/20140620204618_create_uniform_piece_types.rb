@@ -6,5 +6,6 @@ class CreateUniformPieceTypes < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :uniform_piece_types, :piece_type
   end
 end
