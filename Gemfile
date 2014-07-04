@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
+gem 'rails_12factor', group: :production
+
 gem 'bootstrap'
 gem 'bootstrap-sass'
 gem 'bootstrap-tooltip-rails'
@@ -14,6 +18,7 @@ gem 'mini_magick'
 gem 'rails', '4.1.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
+gem 'mysql'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
