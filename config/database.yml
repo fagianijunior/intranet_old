@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: intranet_production
-  username: intranet
+  username: root
   password: <%= ENV['INTRANET_DATABASE_PASSWORD'] %>
