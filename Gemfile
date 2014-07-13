@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails_12factor', group: :production
-
-gem 'bootstrap'
+#gem 'bootstrap'
 gem 'bootstrap-sass'
 gem 'bootstrap-tooltip-rails'
 gem 'simple_form'
