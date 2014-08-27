@@ -71,6 +71,7 @@ GEM
     multi_json (1.10.1)
     mysql (2.9.1)
     mysql2 (0.3.16)
+    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -150,6 +151,7 @@ DEPENDENCIES
   mini_magick
   mysql
   mysql2
+  pg
   rails (= 4.1.1)
   rails_12factor
   sass-rails (~> 4.0.3)
