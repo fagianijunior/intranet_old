@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
+gem 'pg'
 gem 'rails_12factor'
 gem 'bootstrap'
 gem 'bootstrap-sass'
