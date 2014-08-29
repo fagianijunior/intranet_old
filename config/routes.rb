@@ -26,8 +26,8 @@ Rails.application.routes.draw do
 
   resources :uniform_piece_groups
 
-  #resources :cities
-  #resources :states
+  resources :cities
+  resources :states
   #resources :genders
 
   # The priority is based upon order of creation: first created -> highest priority.

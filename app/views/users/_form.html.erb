@@ -30,6 +30,7 @@
         <%= f.input :address, placeholder: "Endereço" %>
       </abbr>
       <%= f.association :state, label_method: :state, prompt: "Selecione um estado" %>
+      <%= link_to '+Novo estado', new_state_path, { :remote => true, 'data-toggle' => "modal", 'data-target' => '#modal-window' } %>
       <%= f.association :city, label_method: :city, prompt: "Selecione uma cidade" %>
     <% end %>
     <br>
