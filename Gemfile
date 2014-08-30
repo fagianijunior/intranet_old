@@ -10,6 +10,8 @@ gem 'bootstrap-tooltip-rails'
 gem 'simple_form'
 gem 'bcrypt-ruby'
 
+gem 'less-rails'
+
 gem 'carrierwave'
 #gem 'rmagick'
 gem 'mini_magick'
