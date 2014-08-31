@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.2'
-
+gem 'jquery-turbolinks'
 gem 'pg'
 gem 'rails_12factor'
 #gem 'bootstrap'
